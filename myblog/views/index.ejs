@@ -1,0 +1,44 @@
+<% include include/header.ejs%>
+<div class="container">
+    <h1 class="text-success">最新博客</h1>
+    <hr/>
+    <ul class="media-list">
+        <%
+        articles.forEach(function(article){
+        %>
+        <li class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="<%=article.user.avatar%>" alt="">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><a href="/articles/detail/<%=article._id%>"><%=article.title%></a></h4>
+                <p class="media-left"><%- article.content%></p>
+            </div>
+            <div class="media-bottom">
+                作者:<%=article.user.username%>
+                发表时间:<%=article.createAt.toLocaleString()%>
+                阅读：<%= article.pv %>|
+                评论：<%= article.comments.length%>
+
+            </div>
+        </li>
+        <%
+        });
+        %>
+    </ul>
+
+    <ul class="pagination">
+        <%
+            //求出总页数
+        var total=Math.ceil(count/pageSize)
+        for(var i=1;i<=total;i++){
+        %>
+        <li><a href="/articles/list/<%=i%>/<%=pageSize%>?keyword=<%=keyword%>"><%=i%></a></li>
+        <%
+        }
+        %>
+    </ul>
+</div>
+<% include include/footer.ejs%>

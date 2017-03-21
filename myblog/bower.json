@@ -1,0 +1,20 @@
+{
+  "name": "zkingblog",
+  "description": "myblog",
+  "main": "",
+  "authors": [
+    "pc <JauneMmeChine@163.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
