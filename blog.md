@@ -1,3 +1,10 @@
+### 运行执行的命令
+#### (1)在安装的mogodb下的bin 目录下执行 mongod --dbpath data文件所在的路径
+#### (2)在bin的目录下新的窗口执行mongo 的命令
+#### (3) use myblog
+#### (4)运行www.js 文件
+
+
 # blog
 ### 本项目采用express+npm+ejs+mongodb+mongoose来搭建项目
 ## Express安装
